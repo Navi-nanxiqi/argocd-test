@@ -1,12 +1,17 @@
+# 所有的资源安装在 argocd 命名空间中
+# project & repo资源由 argocd命令行和UI界面创建
+# project: name=my-project
+# respository: https://github.com/Navi-nanxiqi/argocd-test.git
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx
 spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -14,6 +19,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: docker.m.daocloud.io/nginx:latest
+        image: docker.m.daocloud.io/nginx:Latest
         ports:
         - containerPort: 80
