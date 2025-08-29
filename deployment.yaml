@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: docker.m.daocloud.io/nginx:Latest
+        image: docker.m.daocloud.io/nginx:latest
         ports:
         - containerPort: 80
