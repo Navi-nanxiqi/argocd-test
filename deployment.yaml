@@ -22,3 +22,23 @@ spec:
         image: docker.m.daocloud.io/nginx:latest
         ports:
         - containerPort: 80
+----
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx2
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx2
+        image: docker.m.daocloud.io/nginx:latest
+        ports:
+        - containerPort: 80
