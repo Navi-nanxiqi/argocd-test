@@ -9,6 +9,7 @@
 #   url: https://github.com/argoproj/argocd-example-apps.git
 #   description: argocd-app-root-repo
 
+
 # ---
 # apiVersion: argoproj.io/v1alpha1
 # kind: Application
